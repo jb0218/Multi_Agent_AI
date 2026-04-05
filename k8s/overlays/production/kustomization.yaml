@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+  - hpa.yaml
+secretGenerator:
+  - name: agent-secrets
+    literals:
+      - OPENAI_API_KEY=sk-proj-...
+      - JWT_SECRET=prod-secure-secret
+      - LANGFUSE_PUBLIC_KEY=pk-lf-...
+      - LANGFUSE_SECRET_KEY=sk-lf-...
+configMapGenerator:
+  - name: agent-config
+    literals:
+      - DATABASE_URL=postgresql+asyncpg://agent:agent@pg-svc:5432/agentdb
+      - REDIS_URL=redis://redis-svc:6379/0
+      - PROMETHEUS_DISABLE_METRICS=false

@@ -1,0 +1,45 @@
+# Replace your requirements.txt with these pinned, tested versions
+@"
+# Core Framework
+fastapi[standard]>=0.115,<0.116
+uvicorn[standard]>=0.28,<0.29
+pydantic-settings>=2.7,<2.8
+
+# AI & Agents - PINNED FOR COMPATIBILITY
+langgraph>=0.2.50,<0.3
+langchain-openai>=0.2.0,<0.3
+langchain-postgres>=0.0.13,<0.1
+langgraph-checkpoint-redis>=0.0.5,<0.1
+langchain-community>=0.3.0,<0.4
+
+# Document Processing & Web
+pypdf>=5.1,<6
+beautifulsoup4>=4.12,<5
+httpx>=0.28,<0.29
+
+# Database & Cache
+redis[hiredis]>=5.2,<6
+asyncpg>=0.30,<0.31
+sqlalchemy[asyncio]>=2.0,<2.1
+sqlparse>=0.5,<0.6
+
+# Observability & Monitoring
+structlog>=24.4,<25
+langfuse>=2.50,<3
+prometheus-fastapi-instrumentator>=7.0,<8
+
+# Security & Auth
+python-jose[cryptography]>=3.3,<4
+passlib[bcrypt]>=1.7,<2
+
+# Background Tasks & Reliability
+arq>=0.26,<0.27
+tenacity>=9.0,<10
+
+# Performance
+# uvloop removed for Windows compatibility
+
+# Dev & Testing
+pytest>=8.3,<9
+pytest-asyncio>=0.24,<0.25
+"@ | Out-File -FilePath "requirements.txt" -Encoding utf8
