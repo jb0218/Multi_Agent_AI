@@ -2,12 +2,6 @@
 
 # 🤖 Multi-Agent AI System (Production-Ready)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
-jb0218Add a comment on line R3
-Add diff comment
-Markdown input: edit mode selected.
-Write
-Preview
-Leave a comment
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-green.svg)](https://fastapi.tiangolo.com/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-0.2+-orange.svg)](https://langchain-ai.github.io/langgraph/)
 [![Docker](https://img.shields.io/badge/Docker-Compose-2496ED.svg)](https://www.docker.com/)
